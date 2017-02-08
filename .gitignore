@@ -35,3 +35,13 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# Swap files from vi
+*.swp
+
+# OS Files
+
+
+# OS Files
+.DS_Store
+
