@@ -13,3 +13,12 @@ server.route({
         reply('Hello world!');
     }
 });
+
+server.start( err => {
+    if (err) {
+        // TODO: Add more robust and persistent error handling
+        console.error( 'Error was handled!');
+        console.error(err);
+    }
+    console.log("Server started at " + server.info.uri );
+});
