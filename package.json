@@ -1,7 +1,7 @@
 {
   "name": "node_test_service",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "git@github.com:Hultner/node_test_service.git",
   "author": "Alexander Hultnér <ahultner@gmail.com>",
   "license": "UNLICENSED",
