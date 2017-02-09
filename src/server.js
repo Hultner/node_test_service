@@ -2,8 +2,16 @@ import Hapi from 'hapi';
 
 const server = new Hapi.Server();
 
-server.connection( {
+server.connection({
     port: 8000
+});
+
+server.route({
+    method: 'GET',
+    path: '/',
+    handler: (request, reply) => {
+        reply({root:true});
+    }
 });
 
 server.route({
@@ -22,3 +30,4 @@ server.start( err => {
     }
     console.log("Server started at " + server.info.uri );
 });
+
