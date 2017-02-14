@@ -38,6 +38,7 @@ jspm_packages
 
 # Swap files from vi
 *.swp
+*.swo
 
 # OS Files
 
