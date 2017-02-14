@@ -1,6 +1,8 @@
 import Hapi from 'hapi';
+import HelloWorld from './api/hello-world';
 
 const server = new Hapi.Server();
+const hello = new HelloWorld;
 
 server.connection({
     port: 8000
@@ -16,9 +18,9 @@ server.route({
 
 server.route({
     method: 'GET',
-    path: '/hello-world',
+    path: hello.path(),
     handler: (request, reply) => {
-        reply('Hello world!');
+        reply(hello.get(request));
     }
 });
 
