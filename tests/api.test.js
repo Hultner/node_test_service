@@ -1,3 +1,7 @@
+/**
+ * API test - api.test.js 
+ * Jest tests for the application API
+ */
 import server from '../src/server';
 import HelloWorld from '../src/api/hello-world';
 
