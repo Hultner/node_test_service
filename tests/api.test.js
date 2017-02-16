@@ -9,7 +9,10 @@ describe('HTTP Server Injection tests', () => {
 
     test('Root path', async () => {
         var data = await server.inject('/');
+        var payload = JSON.parse(data.payload);
+
         expect(data.statusCode).toBe(200);
+        expect( payload.root ).toBe(true);
     });
 
     test('Invalid path', async () => {
