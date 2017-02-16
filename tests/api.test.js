@@ -5,6 +5,7 @@
 import server from '../src/server';
 import HelloWorld from '../src/api/hello-world';
 
+// These test against the server api and therefor have to wait for server setup
 describe('HTTP Server Injection tests', () => {
 
     beforeAll((done) => server.once('onPostStart', done));
@@ -33,6 +34,7 @@ describe('HTTP Server Injection tests', () => {
 
 });
 
+// Test directly against api classes
 describe('API Class tests', () => {
     
     test('hello-world test', () => {
