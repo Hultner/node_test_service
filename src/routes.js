@@ -8,8 +8,9 @@
 
 const routes = generateRoutes();
 
-generateRoutes(){
+function generateRoutes(){
     //If function get post put delete@path
+    return [];
 }
 
 export default routes;

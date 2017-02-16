@@ -7,7 +7,7 @@ import Hapi from 'hapi';
 import HelloWorld from './api/hello-world';
 
 const server = new Hapi.Server();
-const hello = new HelloWorld;
+const hello = new HelloWorld();
 
 server.connection({
     port: 8000
@@ -39,7 +39,7 @@ server.start( err => {
         console.error(err);
     }
 
-    console.log("Server started at " + server.info.uri );
+    console.log('Server started at ' + server.info.uri );
 
     // Emit event announcing that the server have started
     server.emit('onPostStart', 'hello');
