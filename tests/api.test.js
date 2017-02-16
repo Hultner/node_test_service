@@ -10,7 +10,6 @@ describe('HTTP Server Injection tests', () => {
     test('Root path', async () => {
         var data = await server.inject('/');
         var payload = JSON.parse(data.payload);
-
         expect(data.statusCode).toBe(200);
         expect( payload.root ).toBe(true);
     });
@@ -18,6 +17,13 @@ describe('HTTP Server Injection tests', () => {
     test('Invalid path', async () => {
         var data = await server.inject('/invalid-path');
         expect(data.statusCode).toBe(404);
+    });
+
+    test('hello-world path', async () => {
+        var data = await server.inject('/hello-world');
+        var payload = data.payload;
+        expect(data.statusCode).toBe(200);
+        expect(payload).toBe("Hello World!");
     });
 
 
