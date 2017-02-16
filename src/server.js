@@ -1,3 +1,8 @@
+/**
+ * Server
+ * Module containing a server for a node hapi rest api
+ */
+
 import Hapi from 'hapi';
 import HelloWorld from './api/hello-world';
 
