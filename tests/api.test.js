@@ -2,6 +2,7 @@
  * API test - api.test.js 
  * Jest tests for the application API
  */
+/* eslint-env jest */
 import server from '../src/server';
 import HelloWorld from '../src/api/hello-world';
 
@@ -30,7 +31,7 @@ describe('HTTP Server Injection tests', () => {
         var data = await server.inject('/hello-world');
         var payload = data.payload;
         expect(data.statusCode).toBe(200);
-        expect(payload).toBe("Hello World!");
+        expect(payload).toBe('Hello World!');
     });
 
 
