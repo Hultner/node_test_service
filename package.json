@@ -7,7 +7,8 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "jest && eslint .",
+    "lint": "eslint .",
     "start": "node bootstrap.js"
   },
   "dependencies": {
