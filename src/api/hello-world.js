@@ -1,10 +1,11 @@
+// @flow
 export default class HelloWorld {
 
-    path() {
+    path(): string {
         return '/hello-world';
     }
 
-    get() {
+    get(): string {
         return 'Hello World!';
     }
 
