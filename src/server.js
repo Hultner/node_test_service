@@ -2,6 +2,7 @@
  * Server
  * Module containing a server for a node hapi rest api
  */
+// @flow
 
 import Hapi from 'hapi';
 import HelloWorld from './api/hello-world';
@@ -25,7 +26,7 @@ server.route({
     method: 'GET',
     path: hello.path(),
     handler: (request, reply) => {
-        reply(hello.get(request));
+        reply( (hello.get(request): string) );
     }
 });
 
