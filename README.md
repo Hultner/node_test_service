@@ -10,5 +10,7 @@ Currently experimenting with software stack but as of 2017-02-16 I'm using
 * Babel - Use ES6/ES2017 today
 * Yarn - NPM replacement
 * Travis - Contiuous integration SaaS
+* ESLint - Linting
+* Flow - Static type-checking
 
 
