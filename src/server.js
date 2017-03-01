@@ -5,11 +5,9 @@
 // @flow
 
 import Hapi from 'hapi';
-// import HelloWorld from './api/hello-world';
 import routes from './routes';
 
 const server = new Hapi.Server();
-//const hello = new HelloWorld();
 
 server.connection({
     port: 8000
@@ -23,20 +21,7 @@ server.route({
     }
 });
 
-// server.route(
-//     {
-//         method: 'GET',
-//         path: hello.path(),
-//         handler: (request, reply) => {
-//             reply( (hello.get(request): string) );
-//         }
-//     }
-// );
-
 // Import all external routes from api
-// console.log(routes);
-//routes.map(server.route);
-
 routes.map( route => server.route(route) );
 
 // Register event channel
@@ -50,8 +35,6 @@ server.start( err => {
     }
 
     console.log('Server started at ' + server.info.uri );
-
-    // Emit event announcing that the server have started
     server.emit('onPostStart', 'hello');
 });
 
