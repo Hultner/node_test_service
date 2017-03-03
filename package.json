@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "test": "jest && eslint . && yarn flow",
+    "test": "jest --coverage && eslint . && yarn flow",
     "lint": "eslint .",
     "start": "node bootstrap.js",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
